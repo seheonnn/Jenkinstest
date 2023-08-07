@@ -7,3 +7,11 @@ WORKDIR /usr/src/app
 COPY ./build/libs/JenkinsTest-0.0.1-SNAPSHOT.jar JenkinsTest-0.0.1-SNAPSHOT.jar
 
 CMD ["java","-jar","JenkinsTest-0.0.1-SNAPSHOT.jar"]
+
+
+
+#FROM openjdk:11-jdk
+#LABEL maintainer="email"
+#ARG JAR_FILE=build/libs/core-0.0.1-SNAPSHOT.jar
+#ADD ${JAR_FILE} docker-springboot.jar
+#ENTRYPOINT ["java","-Djava.security.egd=file:/dev/./urandom","-jar","/docker-springboot.jar"]
